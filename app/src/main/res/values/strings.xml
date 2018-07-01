@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Journal</string>
+
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title">Title</string>
+    <string name="body">body</string>
+    <string name="pen_down_your_thoughts">Pen down your thoughts…</string>
+    <string name="date_modified">Date Modified</string>
+    <string name="save_entry_label">SAVE</string>
+    <string name="new_entry_label">New Entry</string>
+    <string name="preview">Preview…</string>
+    <string name="sign_out_label">Sign out</string>
+    <string name="delete_label">Delete</string>
+</resources>

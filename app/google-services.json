@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "670398162110",
+    "firebase_url": "https://myjournal-bbc5a.firebaseio.com",
+    "project_id": "myjournal-bbc5a",
+    "storage_bucket": "myjournal-bbc5a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670398162110:android:926629b0d6eb3ced",
+        "android_client_info": {
+          "package_name": "com.example.hp.myjournal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "670398162110-gh8uvi350rk3t9ghhhua9n4367glqn09.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hp.myjournal",
+            "certificate_hash": "3ca3afd810cda7fa8d249faad7c0c57a42673045"
+          }
+        },
+        {
+          "client_id": "670398162110-1j86ll26pndkg0ur3kcqa9np5ojnev68.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD11Bo18i2hLTGiBy0asBkPZUwwmbM9Cds"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "670398162110-1j86ll26pndkg0ur3kcqa9np5ojnev68.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

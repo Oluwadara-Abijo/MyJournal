@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    tools:context=".NewJournalEntryActivity">
+
+    <EditText
+        android:id="@+id/title_edit_text"
+        style="@style/EditTextStyle"
+        android:hint="@string/title"
+        android:inputType="textCapWords"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/body_edit_text"
+        style="@style/EditTextStyle"
+        android:hint="@string/pen_down_your_thoughts"
+        android:scrollHorizontally="false"
+        android:inputType="textMultiLine|textCapSentences"/>
+
+</LinearLayout>
