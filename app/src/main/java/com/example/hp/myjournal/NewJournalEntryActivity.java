@@ -1,6 +1,7 @@
 package com.example.hp.myjournal;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,7 +10,9 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -67,37 +70,31 @@ public class NewJournalEntryActivity extends AppCompatActivity {
     }
 
     private JournalEntry getData() {
-            mEntry = new JournalEntry(mEntryTitle, mEntryBody, mDateModified, key);
-            mEntry.setTitle(mTitleEditText.getText().toString());
-            mEntry.setBody(mBodyEditText.getText().toString());
-            mEntry.setDateModified(mDateModified);
-            mEntry.setKey(key);
+        mEntry = new JournalEntry(mEntryTitle, mEntryBody, mDateModified, key);
+        mEntry.setTitle(mTitleEditText.getText().toString());
+        mEntry.setBody(mBodyEditText.getText().toString());
+        mEntry.setDateModified(mDateModified);
+        mEntry.setKey(key);
         return mEntry;
     }
 
     private void updateJournalEntry() {
         mEntry = getData();
         mEntriesDatabaseReference.child(mEntry.getKey()).setValue(mEntry);
+        saveEntry();
+    }
+
+    private void saveEntry() {
         Intent intent = new Intent(NewJournalEntryActivity.this, MainActivity.class);
         startActivity(intent);
         Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show();
-        finish();
     }
 
     private void addEntry() {
-            key = mEntriesDatabaseReference.child("entries").push().getKey();
-            mEntry = getData();
-            mEntriesDatabaseReference.child(key).setValue(mEntry).addOnSuccessListener
-                    (new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            Toast.makeText(NewJournalEntryActivity.this, "Saved",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-
-                    });
-            finish();
-
+        key = mEntriesDatabaseReference.child("entries").push().getKey();
+        mEntry = getData();
+        mEntriesDatabaseReference.child(key).setValue(mEntry);
+        saveEntry();
     }
 
     @Override

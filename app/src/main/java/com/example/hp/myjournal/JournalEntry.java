@@ -22,7 +22,7 @@ public class JournalEntry implements Serializable{
 
     public String getKey() { return key; }
 
-    public void setKey(String id) { this.key = id; }
+    public void setKey(String key) { this.key = key; }
 
     public String getTitle() {
         return title;
